@@ -1,6 +1,7 @@
 # Xword
 
-**Xword** is a small crossword puzzle generator written in OCaml without third-party dependencies.
+**Xword** is a small crossword generator that uses the simulated annealing optimisation algorithm.
+It is written in OCaml with no third-party dependencies.
 
 ## Usage
 
