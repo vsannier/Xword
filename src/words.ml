@@ -28,9 +28,9 @@ let choose (words : t) : string = words.(Random.int (length words))
 
 (** Load words from a file *)
 let load (path : string) : t =
-  let read_lines filepath =
+  let read_lines (path : string) : string list =
     let lines = ref [] in
-    let channel = open_in filepath in
+    let channel = open_in path in
     try
       while true do
         lines := input_line channel :: !lines
