@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Grid.html">
+<link rel="next" href="Main.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Words" rel="Chapter" href="Words.html">
+<link title="Line" rel="Chapter" href="Line.html">
+<link title="Grid" rel="Chapter" href="Grid.html">
+<link title="Annealing" rel="Chapter" href="Annealing.html">
+<link title="Main" rel="Chapter" href="Main.html"><title>Annealing</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Grid.html" title="Grid">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Main.html" title="Main">Next</a>
+</div>
+<h1>Module <a href="type_Annealing.html">Annealing</a></h1>
+
+<pre><span id="MODULEAnnealing"><span class="keyword">module</span> Annealing</span>: <code class="code">sig</code> <a href="Annealing.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>Simulated annealing optimisation algorithm</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Victor Sannier</li>
+</ul>
+</div>
+<hr width="100%">
+
+<pre><span id="VALevaluate"><span class="keyword">val</span> evaluate</span> : <code class="type"><a href="Grid.html#TYPEt">Grid.t</a> -> float</code></pre><div class="info ">
+<div class="info-desc">
+<p>Evaluate a grid by counting the number of empty squares it contains</p>
+</div>
+</div>
+
+<pre><span id="VALget_random_neighbour"><span class="keyword">val</span> get_random_neighbour</span> : <code class="type"><a href="Words.html#TYPEt">Words.t</a> -> <a href="Grid.html#TYPEt">Grid.t</a> -> <a href="Grid.html#TYPEt">Grid.t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p>Get a new grid by adding or recursively removing a word at random</p>
+</div>
+</div>
+
+<pre><span id="VALacceptance_probability"><span class="keyword">val</span> acceptance_probability</span> : <code class="type">float -> float -> float -> float</code></pre><div class="info ">
+<div class="info-desc">
+<p>Calculate the acceptance probability
+    given the temperature, the evaluation of the current state
+    and the evaluation of the new state</p>
+</div>
+</div>
+
+<pre><span id="VALgenerate_puzzle"><span class="keyword">val</span> generate_puzzle</span> : <code class="type">int -> int -> int -> <a href="Words.html#TYPEt">Words.t</a> -> <a href="Grid.html#TYPEt">Grid.t</a> * float</code></pre><div class="info ">
+<div class="info-desc">
+<p>Execute the simulated annealing algorithm to generate a puzzle
+    with a given height, size and allowed words</p>
+</div>
+</div>
+</body></html>

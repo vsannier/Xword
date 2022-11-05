@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Line.html">
+<link rel="next" href="Annealing.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Words" rel="Chapter" href="Words.html">
+<link title="Line" rel="Chapter" href="Line.html">
+<link title="Grid" rel="Chapter" href="Grid.html">
+<link title="Annealing" rel="Chapter" href="Annealing.html">
+<link title="Main" rel="Chapter" href="Main.html"><title>Grid</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Line.html" title="Line">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Annealing.html" title="Annealing">Next</a>
+</div>
+<h1>Module <a href="type_Grid.html">Grid</a></h1>
+
+<pre><span id="MODULEGrid"><span class="keyword">module</span> Grid</span>: <code class="code">sig</code> <a href="Grid.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>Grid operations</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Victor Sannier</li>
+</ul>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type">char option array array</code> </pre>
+
+
+<pre><span id="VALmake"><span class="keyword">val</span> make</span> : <code class="type">int -> int -> <a href="Grid.html#TYPEt">t</a></code></pre>
+<pre><span id="VALcopy"><span class="keyword">val</span> copy</span> : <code class="type"><a href="Grid.html#TYPEt">t</a> -> <a href="Grid.html#TYPEt">t</a></code></pre>
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type"><a href="Grid.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p>Print a grid by printing each line sequentially</p>
+</div>
+</div>
+
+<pre><span id="VALget_dims"><span class="keyword">val</span> get_dims</span> : <code class="type"><a href="Grid.html#TYPEt">t</a> -> int * int</code></pre><div class="info ">
+<div class="info-desc">
+<p>Get the dimension of a grid</p>
+</div>
+</div>
+
+<pre><span id="VALout_of_bounds"><span class="keyword">val</span> out_of_bounds</span> : <code class="type">int -> int -> int -> int -> bool</code></pre><div class="info ">
+<div class="info-desc">
+<p>Check whether a grid (given by its two dimensions) contains a square (given by its coordinates)</p>
+</div>
+</div>
+
+<pre><span id="VALget_row"><span class="keyword">val</span> get_row</span> : <code class="type">int -> <a href="Grid.html#TYPEt">t</a> -> <a href="Line.html#TYPEt">Line.t</a></code></pre>
+<pre><span id="VALget_col"><span class="keyword">val</span> get_col</span> : <code class="type">int -> <a href="Grid.html#TYPEt">t</a> -> <a href="Line.html#TYPEt">Line.t</a></code></pre>
+<pre><span id="VALcount_predicate"><span class="keyword">val</span> count_predicate</span> : <code class="type">(char option -> bool) -> <a href="Grid.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+<div class="info-desc">
+<p>Count the number of times a predicate is verified in a grid</p>
+</div>
+</div>
+
+<pre><span id="VALcount_none"><span class="keyword">val</span> count_none</span> : <code class="type"><a href="Grid.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+<div class="info-desc">
+<p>Count the number of empty squares in a grid</p>
+</div>
+</div>
+
+<pre><span id="VALcount_some"><span class="keyword">val</span> count_some</span> : <code class="type"><a href="Grid.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+<div class="info-desc">
+<p>Count the number of filled squares in a grid</p>
+</div>
+</div>
+
+<pre><span id="VALtranspose"><span class="keyword">val</span> transpose</span> : <code class="type"><a href="Grid.html#TYPEt">t</a> -> <a href="Grid.html#TYPEt">t</a></code></pre>
+<pre><span id="VALget_words"><span class="keyword">val</span> get_words</span> : <code class="type"><a href="Grid.html#TYPEt">t</a> -> string list</code></pre><div class="info ">
+<div class="info-desc">
+<p>Get all the words in a grid, in both directions</p>
+</div>
+</div>
+
+<pre><span id="VALis_valid"><span class="keyword">val</span> is_valid</span> : <code class="type"><a href="Words.html#TYPEt">Words.t</a> -> <a href="Grid.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
+<div class="info-desc">
+<p>Determine whether a grid is a valid crossword puzzle, i.e. whether all the words in it are valid</p>
+</div>
+</div>
+
+<pre><span id="VALremove_words_at"><span class="keyword">val</span> remove_words_at</span> : <code class="type"><a href="Words.html#TYPEt">Words.t</a> -> int -> int -> <a href="Grid.html#TYPEt">t</a> -> <a href="Grid.html#TYPEt">t</a></code></pre>
+<pre><span id="VALremove_random_word"><span class="keyword">val</span> remove_random_word</span> : <code class="type"><a href="Words.html#TYPEt">Words.t</a> -> <a href="Grid.html#TYPEt">t</a> -> <a href="Grid.html#TYPEt">t</a></code></pre>
+<pre><span id="VALinsert_random_word"><span class="keyword">val</span> insert_random_word</span> : <code class="type"><a href="Words.html#TYPEt">Words.t</a> -> <a href="Grid.html#TYPEt">t</a> -> <a href="Grid.html#TYPEt">t</a></code></pre></body></html>

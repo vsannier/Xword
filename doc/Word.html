@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="next" href="Line.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Word" rel="Chapter" href="Word.html">
+<link title="Line" rel="Chapter" href="Line.html">
+<link title="Grid" rel="Chapter" href="Grid.html">
+<link title="Annealing" rel="Chapter" href="Annealing.html">
+<link title="Main" rel="Chapter" href="Main.html"><title>Word</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Line.html" title="Line">Next</a>
+</div>
+<h1>Module <a href="type_Word.html">Word</a></h1>
+
+<pre><span id="MODULEWord"><span class="keyword">module</span> Word</span>: <code class="code">sig</code> <a href="Word.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>Word validation and operations</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Victor Sannier</li>
+</ul>
+</div>
+<hr width="100%">
+
+<pre><span id="MODULEStringSet"><span class="keyword">module</span> <a href="Word.StringSet.html">StringSet</a></span>: <code class="type">Stdlib.Set.Make</code><code class="code">(</code><code class="code">sig</code></pre><div class="sig_block">
+<pre><span id="VALcompare"><span class="keyword">val</span> compare</span> : <code class="type">Stdlib.String.t -> Stdlib.String.t -> int</code></pre>
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type">string</code> </pre>
+
+</div>
+<pre><code class="code">end</code><code class="code">)</code></pre>
+<pre><span id="VALis_valid"><span class="keyword">val</span> is_valid</span> : <code class="type">StringSet.t -> string -> bool</code></pre><div class="info ">
+<div class="info-desc">
+<p>Determine whether a word is valid, i.e. whether it is one letter or less in length or part of the set of allowed words</p>
+</div>
+</div>
+
+<pre><span id="VALget_random_word"><span class="keyword">val</span> get_random_word</span> : <code class="type">StringSet.t -> string</code></pre><div class="info ">
+<div class="info-desc">
+<p>Get a random string in a set by choosing an index and iterating the set</p>
+</div>
+</div>
+</body></html>
