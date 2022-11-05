@@ -8,7 +8,7 @@ It is written in OCaml with no third-party dependencies.
 In order the build the program from source, one may use the following command:
 
 ```console
-$ eval $(opam env) && make
+$ eval $(opam env) && mkdir bin && make
 ```
 
 Then the `xword` binary can be used as follows:
