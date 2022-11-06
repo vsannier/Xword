@@ -1,14 +1,14 @@
 # Xword
 
-**Xword** is a small crossword generator that uses the simulated annealing optimisation algorithm.
-It is written in OCaml with no third-party dependencies.
+**Xword** is a small crossword generator that uses the simulated annealing 
+optimisation algorithm. It is written in OCaml with no third-party dependencies.
 
 ## Usage
 
 In order the build the program from source, one may use the following command:
 
 ```console
-$ eval $(opam env) && mkdir bin && make
+$ eval $(opam env) && make
 ```
 
 Then the `xword` binary can be used as follows:
